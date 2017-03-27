@@ -13,6 +13,11 @@ class Customer
   attr_reader :id
 
   def reviews
+    sql = <<-SQL
+    SELECT * FROM reviews
+    WHERE reviews.customer_id = customer.id
+    SQL
+    DB[:conn].execute(sql)
   end
 
   def restaurants

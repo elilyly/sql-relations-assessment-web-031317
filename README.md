@@ -18,14 +18,6 @@ Here, we have a different Yelp-style application. We need customers, restaurants
    + What we are concerned about is which tables have foreign keys
    + Don't stress: There may be multiple correct answers based on your conception of the problem.
 
-   Eg. for our books and authors your deliverable would look like
-
-    ### books
-    id | title | author_id
-
-    ### author
-    id | name |
-
 2. As a second step, please fill in the stubbed out methods in the respective model. The important thing here is to know what SQL will fire to select the data you're looking for. For example, if I want a method called 'author' for my `Book` class, it might look something like this.
 
 ```ruby
@@ -73,3 +65,15 @@ end
 
 
 #### Write your domain model here:
+
+###customer
+id | name
+
+###restaurants
+id | name | location | owner_id
+
+###owner
+id | name
+
+###reviews
+id | customer_id |restaurant_id
